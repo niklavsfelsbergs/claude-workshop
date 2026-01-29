@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code for BI Teams | Workshop</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-brand">
+            <span class="header-icon">⚡</span>
+            <h1 class="header-title">Claude Code for BI Teams</h1>
+        </div>
+        <div class="header-subtitle">From Browser to Agentic Coding</div>
+    </header>
+
+    <!-- Tab Navigation -->
+    <nav class="tab-nav">
+        <button class="tab-btn active" data-tab="why-agentic">Why Agentic?</button>
+        <button class="tab-btn" data-tab="installation">Installation & Setup</button>
+        <button class="tab-btn" data-tab="slash-commands">Slash Commands</button>
+        <button class="tab-btn" data-tab="git">Git & Version Control</button>
+        <button class="tab-btn" data-tab="before-demo">Before We Demo</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Why Agentic Tab -->
+        <section id="why-agentic" class="tab-panel active">
+            <h2 class="section-title">Why Agentic?</h2>
+            <p class="section-subtitle">Understanding the shift from chat to autonomous coding</p>
+
+            <!-- The Key Insight -->
+            <div class="technique-card highlight">
+                <div class="technique-header">
+                    <h3 class="technique-title">The Core Difference</h3>
+                    <p class="technique-tagline">You stop being the copy-paste middleman</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="golden-rule">
+                        <span class="rule-icon">💡</span>
+                        <div>
+                            <span class="rule-label">KEY INSIGHT</span>
+                            <span class="rule-text">"Browser Claude gives you code. Claude Code writes, runs, fails, and fixes it — without you touching anything."</span>
+                        </div>
+                    </div>
+
+                    <h4 class="content-heading">Browser Claude vs Claude Code</h4>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Browser Claude</th>
+                                <th>Claude Code (Agentic)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Gives you code to copy-paste</td>
+                                <td>Creates and edits files directly</td>
+                            </tr>
+                            <tr>
+                                <td>You run it, paste error back</td>
+                                <td>Runs it, reads error, fixes it automatically</td>
+                            </tr>
+                            <tr>
+                                <td>Works with one snippet at a time</td>
+                                <td>Navigates your whole project, edits multiple files</td>
+                            </tr>
+                            <tr>
+                                <td>You re-explain context every chat</td>
+                                <td>Reads project memory (CLAUDE.md) automatically</td>
+                            </tr>
+                            <tr>
+                                <td>Reactive — waits for your next message</td>
+                                <td>Proactive — asks questions, plans, takes action</td>
+                            </tr>
+                            <tr>
+                                <td>No access to your file system</td>
+                                <td>Reads, writes, and runs code in your project folder</td>
+                            </tr>
+                            <tr>
+                                <td>No version control awareness</td>
+                                <td>Can use git: commit, branch, push, diff</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- The Agentic Loop -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">The Agentic Loop</h3>
+                    <p class="technique-tagline">What happens when you give Claude Code a task</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="agentic-loop">
+                        <div class="loop-step">
+                            <span class="loop-icon">🎯</span>
+                            <div class="loop-content">
+                                <strong>Understand Intent</strong>
+                                <p>Parses your request</p>
+                            </div>
+                        </div>
+                        <div class="loop-arrow">→</div>
+                        <div class="loop-step">
+                            <span class="loop-icon">📖</span>
+                            <div class="loop-content">
+                                <strong>Read Files</strong>
+                                <p>Explores your codebase</p>
+                            </div>
+                        </div>
+                        <div class="loop-arrow">→</div>
+                        <div class="loop-step">
+                            <span class="loop-icon">✍️</span>
+                            <div class="loop-content">
+                                <strong>Write Code</strong>
+                                <p>Creates or edits files</p>
+                            </div>
+                        </div>
+                        <div class="loop-arrow">→</div>
+                        <div class="loop-step">
+                            <span class="loop-icon">▶️</span>
+                            <div class="loop-content">
+                                <strong>Run It</strong>
+                                <p>Executes the code</p>
+                            </div>
+                        </div>
+                        <div class="loop-arrow">→</div>
+                        <div class="loop-step error">
+                            <span class="loop-icon">❌</span>
+                            <div class="loop-content">
+                                <strong>See Error</strong>
+                                <p>Reads the output</p>
+                            </div>
+                        </div>
+                        <div class="loop-arrow">→</div>
+                        <div class="loop-step success">
+                            <span class="loop-icon">🔧</span>
+                            <div class="loop-content">
+                                <strong>Fix It</strong>
+                                <p>Iterates automatically</p>
+                            </div>
+                        </div>
+                        <div class="loop-arrow">→</div>
+                        <div class="loop-step">
+                            <span class="loop-icon">✅</span>
+                            <div class="loop-content">
+                                <strong>Verify</strong>
+                                <p>Confirms it works</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="insight-box success">
+                        <span class="insight-icon">🔄</span>
+                        <div>
+                            <strong>This loop happens without you copy-pasting anything</strong>
+                            <p>Claude Code reads the error, understands it, modifies the code, and runs it again. You just watch (and approve when asked).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- You Don't Need to Know Python -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">"You Don't Need to Know Python"</h3>
+                    <p class="technique-tagline">The mental shift for BI professionals</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="quote-block">
+                        <span class="quote-icon">"</span>
+                        <p>I can't write Python syntax from memory. Yet with Claude Code, I build complex scripts daily. The shift is from <strong>"how do I code this?"</strong> to <strong>"what do I want?"</strong></p>
+                    </div>
+
+                    <div class="grid-2">
+                        <div>
+                            <h4 class="content-heading">Old Mental Model</h4>
+                            <div class="mental-model old">
+                                <div class="model-step">Think of what you need</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step">Google the syntax</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step">Copy from Stack Overflow</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step">Adapt to your use case</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step">Debug errors</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step">Repeat...</div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="content-heading">New Mental Model</h4>
+                            <div class="mental-model new">
+                                <div class="model-step">Describe what you want</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step highlight">Claude builds it</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step">Review the result</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step">Request changes</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step success">Done ✓</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="insight-box">
+                        <span class="insight-icon">🎯</span>
+                        <div>
+                            <strong>Your Domain Expertise Matters More Than Syntax</strong>
+                            <p>You know your data. You know what a correct output looks like. You know the business rules. Claude knows Python. Together, you build tools neither could alone.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Installation Tab -->
+        <section id="installation" class="tab-panel">
+            <h2 class="section-title">Installation & Setup</h2>
+            <p class="section-subtitle">Get Claude Code running in your terminal</p>
+
+            <!-- Prerequisites -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">Prerequisites</h3>
+                    <p class="technique-tagline">What you need before installing</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="prereq-grid">
+                        <div class="prereq-item">
+                            <span class="prereq-icon">💻</span>
+                            <div>
+                                <strong>Operating System</strong>
+                                <p>macOS 10.15+, Ubuntu 20.04+, or Windows 10+ (with WSL or Git Bash)</p>
+                            </div>
+                        </div>
+                        <div class="prereq-item">
+                            <span class="prereq-icon">🔑</span>
+                            <div>
+                                <strong>Anthropic Account</strong>
+                                <p>Claude Pro ($20/mo), Max ($100–200/mo), or API credits from console.anthropic.com</p>
+                            </div>
+                        </div>
+                        <div class="prereq-item">
+                            <span class="prereq-icon">🌐</span>
+                            <div>
+                                <strong>Internet Connection</strong>
+                                <p>Required for authentication and AI processing</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="insight-box">
+                        <span class="insight-icon">💡</span>
+                        <div>
+                            <strong>Node.js is NOT required for native installation</strong>
+                            <p>The recommended native installer is a self-contained executable. Node.js is only needed if you choose the legacy npm installation method.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Installation Methods -->
+            <div class="technique-card highlight">
+                <div class="technique-header">
+                    <h3 class="technique-title">Installation (Native - Recommended)</h3>
+                    <p class="technique-tagline">One command, no dependencies</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="grid-2">
+                        <div class="installation-method">
+                            <div class="os-header">
+                                <span class="os-icon">🍎</span>
+                                <strong>macOS / Linux / WSL</strong>
+                            </div>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span class="code-file">Terminal</span>
+                                </div>
+                                <pre><code>curl -fsSL https://claude.ai/install.sh | bash</code></pre>
+                            </div>
+                            <p class="method-note">Or with Homebrew:</p>
+                            <div class="code-block small">
+                                <pre><code>brew install --cask claude-code</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="installation-method">
+                            <div class="os-header">
+                                <span class="os-icon">🪟</span>
+                                <strong>Windows PowerShell</strong>
+                            </div>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span class="code-file">PowerShell</span>
+                                </div>
+                                <pre><code>irm https://claude.ai/install.ps1 | iex</code></pre>
+                            </div>
+                            <p class="method-note">Or with Windows CMD:</p>
+                            <div class="code-block small">
+                                <pre><code>curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="insight-box success">
+                        <span class="insight-icon">✅</span>
+                        <div>
+                            <strong>Auto-updates included</strong>
+                            <p>Native installation automatically keeps itself up to date. You can also manually update with <code>claude update</code>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- First Run -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">First Run & Authentication</h3>
+                    <p class="technique-tagline">Starting Claude Code for the first time</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="workflow-steps">
+                        <div class="workflow-step">
+                            <span class="step-num">1</span>
+                            <div class="step-content">
+                                <strong>Navigate to your project</strong>
+                                <div class="code-block small inline">
+                                    <pre><code>cd your-project-folder</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <span class="step-num">2</span>
+                            <div class="step-content">
+                                <strong>Launch Claude Code</strong>
+                                <div class="code-block small inline">
+                                    <pre><code>claude</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <span class="step-num">3</span>
+                            <div class="step-content">
+                                <strong>Authenticate</strong>
+                                <p>Browser opens → Log in with your Claude account (Pro/Max) or Anthropic Console. Use <code>/login</code> later to switch accounts.</p>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <span class="step-num">4</span>
+                            <div class="step-content">
+                                <strong>Start chatting!</strong>
+                                <p>You're now in an interactive session. Just type what you want.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="content-heading">Verify Installation</h4>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-file">Terminal</span>
+                        </div>
+                        <pre><code># Check version
+claude --version
+
+# Health check
+claude doctor</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VS Code Integration -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">Using in VS Code</h3>
+                    <p class="technique-tagline">Run Claude Code alongside your editor</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="grid-2">
+                        <div>
+                            <h4 class="content-heading">Option 1: Integrated Terminal</h4>
+                            <div class="tip-list">
+                                <div class="tip-item">
+                                    <span class="tip-number">1</span>
+                                    <span>Open VS Code in your project folder</span>
+                                </div>
+                                <div class="tip-item">
+                                    <span class="tip-number">2</span>
+                                    <span>Open terminal: <code>Ctrl+`</code> (backtick)</span>
+                                </div>
+                                <div class="tip-item">
+                                    <span class="tip-number">3</span>
+                                    <span>Type <code>claude</code> and press Enter</span>
+                                </div>
+                            </div>
+                            <p class="method-note">Claude Code runs in the terminal pane while you see files in the editor.</p>
+                        </div>
+                        <div>
+                            <h4 class="content-heading">Option 2: Side-by-Side Terminals</h4>
+                            <div class="tip-list">
+                                <div class="tip-item">
+                                    <span class="tip-number">1</span>
+                                    <span>Split terminal: Click the split icon</span>
+                                </div>
+                                <div class="tip-item">
+                                    <span class="tip-number">2</span>
+                                    <span>Run <code>claude</code> in one pane</span>
+                                </div>
+                                <div class="tip-item">
+                                    <span class="tip-number">3</span>
+                                    <span>Use the other for manual commands</span>
+                                </div>
+                            </div>
+                            <p class="method-note">Useful for running tests or checking files while Claude works.</p>
+                        </div>
+                    </div>
+
+                    <div class="insight-box">
+                        <span class="insight-icon">👁️</span>
+                        <div>
+                            <strong>Claude sees your project structure</strong>
+                            <p>When you run <code>claude</code> from a folder, it can read and navigate all files in that directory. It understands the context of your codebase.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Permission Model -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">The Permission Model</h3>
+                    <p class="technique-tagline">You stay in control</p>
+                </div>
+
+                <div class="technique-content">
+                    <p>Claude Code asks for your approval before performing actions like creating files, editing code, or running shell commands. You'll see what it wants to do and can approve or deny.</p>
+
+                    <div class="grid-2">
+                        <div class="decision-box">
+                            <h4 class="content-heading">Claude will ask before...</h4>
+                            <ul class="decision-list">
+                                <li>Creating or editing files</li>
+                                <li>Running shell commands</li>
+                                <li>Installing packages</li>
+                                <li>Any potentially destructive action</li>
+                            </ul>
+                        </div>
+                        <div class="decision-box">
+                            <h4 class="content-heading">You can respond with</h4>
+                            <ul class="decision-list">
+                                <li><strong>Yes</strong> — allow this action</li>
+                                <li><strong>No</strong> — deny and explain why</li>
+                                <li><strong>Always allow</strong> — trust this type of action going forward</li>
+                                <li><kbd>Shift+Tab</kbd> — auto-accept everything (use with care)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="insight-box">
+                        <span class="insight-icon">🛡️</span>
+                        <div>
+                            <strong>Safe by default</strong>
+                            <p>Claude won't delete files, push to git, or run destructive commands without asking. You can configure default permissions with <code>/permissions</code>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Cost Awareness -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">Plans & Cost Awareness</h3>
+                    <p class="technique-tagline">Know what you're spending</p>
+                </div>
+
+                <div class="technique-content">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Plan</th>
+                                <th>Price</th>
+                                <th>Best for</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pro</td>
+                                <td>$20/mo</td>
+                                <td>Light use — hits rate limits with heavy agentic work</td>
+                            </tr>
+                            <tr>
+                                <td>Max (5x)</td>
+                                <td>$100/mo</td>
+                                <td>Regular daily use — solid for most BI workflows</td>
+                            </tr>
+                            <tr>
+                                <td>Max (20x)</td>
+                                <td>$200/mo</td>
+                                <td>Power users — heavy agentic sessions all day</td>
+                            </tr>
+                            <tr>
+                                <td>API Credits</td>
+                                <td>Pay-per-token</td>
+                                <td>Automation, scripting, headless mode</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="insight-box success">
+                        <span class="insight-icon">✅</span>
+                        <div>
+                            <strong>We have the Max plan available</strong>
+                            <p>With Max, you get generous usage limits. In practice, I have never run out of tokens during daily work. Use <code>/cost</code> to monitor your session usage if curious.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Slash Commands Tab -->
+        <section id="slash-commands" class="tab-panel">
+            <h2 class="section-title">Slash Commands</h2>
+            <p class="section-subtitle">Built-in commands to control your session</p>
+
+            <!-- Essential Commands -->
+            <div class="technique-card highlight">
+                <div class="technique-header">
+                    <h3 class="technique-title">Essential Commands</h3>
+                    <p class="technique-tagline">The ones you'll use daily</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="command-grid">
+                        <div class="command-card primary">
+                            <div class="command-name">/init</div>
+                            <div class="command-desc">Initialize project memory</div>
+                            <p>Creates a <code>CLAUDE.md</code> file that gives Claude persistent context about your project. Run this first in any new project!</p>
+                        </div>
+                        <div class="command-card primary">
+                            <div class="command-name">/memory</div>
+                            <div class="command-desc">Edit CLAUDE.md</div>
+                            <p>Open and edit your project's memory file. Add notes, conventions, or context that Claude should always know.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-name">/compact</div>
+                            <div class="command-desc">Compress conversation</div>
+                            <p>When context gets long, this summarizes the conversation to free up space while preserving key info.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-name">/clear</div>
+                            <div class="command-desc">Fresh start</div>
+                            <p>Wipes conversation history completely. Use when starting a totally new task.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-name">/help</div>
+                            <div class="command-desc">Show all commands</div>
+                            <p>Lists all available slash commands, including any custom ones you've created.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-name">/cost</div>
+                            <div class="command-desc">Token usage</div>
+                            <p>Shows how many tokens you've used in the current session. Useful for monitoring API costs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- When to Use What -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">/compact vs /clear</h3>
+                    <p class="technique-tagline">Know when to use each</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="grid-2">
+                        <div class="decision-box">
+                            <h4 class="content-heading">Use /compact when...</h4>
+                            <ul class="decision-list">
+                                <li>Context is getting full but task continues</li>
+                                <li>You want to preserve what Claude learned</li>
+                                <li>You see "context running low" warnings</li>
+                                <li>After completing a sub-task within larger work</li>
+                            </ul>
+                            <div class="decision-result">
+                                <span class="result-icon">📦</span>
+                                <span>Summarizes & keeps going</span>
+                            </div>
+                        </div>
+                        <div class="decision-box">
+                            <h4 class="content-heading">Use /clear when...</h4>
+                            <ul class="decision-list">
+                                <li>Starting a completely different task</li>
+                                <li>Conversation went off track</li>
+                                <li>Claude is confused or stuck</li>
+                                <li>You want a truly fresh perspective</li>
+                            </ul>
+                            <div class="decision-result">
+                                <span class="result-icon">🧹</span>
+                                <span>Wipes everything, fresh start</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Checkpointing & Rewind -->
+            <div class="technique-card highlight">
+                <div class="technique-header">
+                    <h3 class="technique-title">Checkpointing & Rewind</h3>
+                    <p class="technique-tagline">Your safety net — undo anything Claude did</p>
+                </div>
+
+                <div class="technique-content">
+                    <p>Every time you send a prompt, Claude Code creates a <strong>checkpoint</strong>. If something goes wrong, you can rewind.</p>
+
+                    <div class="command-grid" style="grid-template-columns: repeat(3, 1fr);">
+                        <div class="command-card">
+                            <div class="command-name">Conversation Rewind</div>
+                            <div class="command-desc">Go back in chat</div>
+                            <p>Restore to a previous message. Useful when Claude went in the wrong direction.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-name">Code Rewind</div>
+                            <div class="command-desc">Revert file changes only</div>
+                            <p>Undo file edits but keep the conversation. Good when the code was wrong but the discussion was useful.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-name">Full Rewind</div>
+                            <div class="command-desc">Revert everything</div>
+                            <p>Restore both code and conversation to a previous point. Complete do-over.</p>
+                        </div>
+                    </div>
+
+                    <div class="insight-box success">
+                        <span class="insight-icon">🔄</span>
+                        <div>
+                            <strong>Access via <kbd>Esc Esc</kbd> or <code>/rewind</code></strong>
+                            <p>Don't be afraid to let Claude experiment. You can always rewind. Note: bash side-effects (e.g., deleting external files, API calls) cannot be undone by rewind — it only tracks file edits and conversation.</p>
+                        </div>
+                    </div>
+
+                    <div class="insight-box">
+                        <span class="insight-icon">💡</span>
+                        <div>
+                            <strong>For real version control, use Git</strong>
+                            <p>Rewind is great for quick undo, but <strong>git</strong> is the proper safety net for your code. Commit often, and you can always go back. Claude is excellent at managing git for you — see the Git tab.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Useful Commands -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">Other Useful Commands</h3>
+                    <p class="technique-tagline">Good to know about</p>
+                </div>
+
+                <div class="technique-content">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Command</th>
+                                <th>Purpose</th>
+                                <th>When to use</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>/doctor</code></td>
+                                <td>Check installation health</td>
+                                <td>Something seems broken</td>
+                            </tr>
+                            <tr>
+                                <td><code>/model</code></td>
+                                <td>Switch AI model</td>
+                                <td>Want to try Opus vs Sonnet</td>
+                            </tr>
+                            <tr>
+                                <td><code>/permissions</code></td>
+                                <td>Manage allowed actions</td>
+                                <td>Configure what Claude can do without asking</td>
+                            </tr>
+                            <tr>
+                                <td><code>/rewind</code></td>
+                                <td>Undo changes</td>
+                                <td>Something went wrong, want to go back</td>
+                            </tr>
+                            <tr>
+                                <td><code>/config</code></td>
+                                <td>View/edit configuration</td>
+                                <td>Change settings</td>
+                            </tr>
+                            <tr>
+                                <td><code>/add-dir</code></td>
+                                <td>Add working directories</td>
+                                <td>Work across multiple folders at once</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- CLAUDE.md Deep Dive -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">CLAUDE.md — Project Memory</h3>
+                    <p class="technique-tagline">The most important file for effective Claude Code usage</p>
+                </div>
+
+                <div class="technique-content">
+                    <p>The <code>CLAUDE.md</code> file is Claude's "constitution" for your project. It's automatically read at the start of every session.</p>
+
+                    <div class="golden-rule">
+                        <span class="rule-icon">⚡</span>
+                        <div>
+                            <span class="rule-label">FIRST THING TO DO IN ANY PROJECT</span>
+                            <span class="rule-text">Run <code>/init</code> to create your CLAUDE.md. This is the single most impactful thing you can do for Claude Code effectiveness.</span>
+                        </div>
+                    </div>
+
+                    <h4 class="content-heading">What to put in CLAUDE.md</h4>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-file">CLAUDE.md</span>
+                        </div>
+                        <pre><code># Project: Sales Data Pipeline
+
+## Overview
+Automated ETL and reporting for regional sales data.
+
+## Tech Stack
+- Python 3.11+ with Polars for data processing
+- CSV/Excel input, HTML/PDF reports
+
+## Conventions
+- Use snake_case for all variables
+- All monetary values in EUR
+- Date format: YYYY-MM-DD
+
+## Business Rules
+- Q4 bonus applies only if revenue > 100k
+- EMEA region uses different tax rates
+
+## How to run
+python pipeline.py --input sales_q4.csv</code></pre>
+                    </div>
+
+                    <div class="insight-box success">
+                        <span class="insight-icon">🧠</span>
+                        <div>
+                            <strong>Every session starts with this context</strong>
+                            <p>Claude reads CLAUDE.md automatically. You don't need to re-explain your project every time. This is how you "teach" Claude about your domain.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Slash Commands -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">Custom Slash Commands</h3>
+                    <p class="technique-tagline">Reusable prompts for your team</p>
+                </div>
+
+                <div class="technique-content">
+                    <p>Store frequently used prompts as custom commands your whole team can share.</p>
+
+                    <div class="grid-2">
+                        <div>
+                            <h4 class="content-heading">Where to put them</h4>
+                            <table class="comparison-table">
+                                <tbody>
+                                    <tr>
+                                        <td><code>.claude/commands/</code></td>
+                                        <td>Shared with team (in project repo)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>~/.claude/commands/</code></td>
+                                        <td>Personal (all your projects)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h4 class="content-heading">Example: git-save.md</h4>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span class="code-file">.claude/commands/git-save.md</span>
+                                </div>
+                                <pre><code>---
+description: Stage, commit, and push changes
+---
+1. Run git status to see what changed
+2. Stage all modified files
+3. Write a clear commit message
+   summarizing the changes
+4. Show me the commit message and
+   ask for confirmation before committing
+5. After I confirm, commit and push</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="insight-box">
+                        <span class="insight-icon">💡</span>
+                        <div>
+                            <strong>Use with: <code>/git-save</code></strong>
+                            <p>Great for standardizing repetitive workflows across the team. Commit your commands to the repo so everyone benefits.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Keyboard Shortcuts -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">Keyboard Shortcuts</h3>
+                    <p class="technique-tagline">Navigate faster</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="shortcut-grid">
+                        <div class="shortcut-item">
+                            <kbd>Esc</kbd>
+                            <span>Interrupt Claude's response</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <kbd>Esc Esc</kbd>
+                            <span>Open rewind menu (undo changes)</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <kbd>Ctrl+C</kbd>
+                            <span>Cancel current operation</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <kbd>Ctrl+O</kbd>
+                            <span>Show full output / expand context</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <kbd>Ctrl+R</kbd>
+                            <span>Search previous prompts</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <kbd>@</kbd>
+                            <span>Reference files, folders, and images</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <kbd>!</kbd>
+                            <span>Bash mode prefix (run shell cmd)</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <kbd>Shift+Enter</kbd>
+                            <span>Line break in multi-line prompts</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <kbd>Shift+Tab</kbd>
+                            <span>Auto-accept all permissions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Git & Version Control Tab -->
+        <section id="git" class="tab-panel">
+            <h2 class="section-title">Git & Version Control</h2>
+            <p class="section-subtitle">Claude handles git so you don't have to memorize commands</p>
+
+            <!-- Why Git Matters -->
+            <div class="technique-card highlight">
+                <div class="technique-header">
+                    <h3 class="technique-title">Why Git?</h3>
+                    <p class="technique-tagline">Your safety net and collaboration tool</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="golden-rule">
+                        <span class="rule-icon">💡</span>
+                        <div>
+                            <span class="rule-label">KEY POINT</span>
+                            <span class="rule-text">You don't need to learn git commands. Just tell Claude what you want — it handles the git operations for you.</span>
+                        </div>
+                    </div>
+
+                    <h4 class="content-heading">What Git gives you</h4>
+                    <div class="prereq-grid">
+                        <div class="prereq-item">
+                            <span class="prereq-icon">🔄</span>
+                            <div>
+                                <strong>Undo anything</strong>
+                                <p>Every commit is a save point. Go back to any previous version at any time.</p>
+                            </div>
+                        </div>
+                        <div class="prereq-item">
+                            <span class="prereq-icon">👥</span>
+                            <div>
+                                <strong>Collaborate</strong>
+                                <p>Multiple people can work on the same project. Git merges the changes together.</p>
+                            </div>
+                        </div>
+                        <div class="prereq-item">
+                            <span class="prereq-icon">📋</span>
+                            <div>
+                                <strong>Track history</strong>
+                                <p>See who changed what, when, and why. Full audit trail of your project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Claude Does Git For You -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">Just Ask Claude</h3>
+                    <p class="technique-tagline">Natural language instead of memorizing commands</p>
+                </div>
+
+                <div class="technique-content">
+                    <p>Instead of learning git syntax, just tell Claude what you want in plain English:</p>
+
+                    <div class="grid-2">
+                        <div>
+                            <h4 class="content-heading">What you say</h4>
+                            <div class="code-block">
+                                <pre><code>"Save my current progress with a
+description of what I changed"
+
+"Show me what I changed since
+last save"
+
+"Create a new branch called
+feature/new-report"
+
+"Undo my last commit, I made
+a mistake"
+
+"Push my changes to the remote
+repository"</code></pre>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="content-heading">What Claude runs</h4>
+                            <div class="code-block">
+                                <pre><code>git add -A
+git commit -m "Add sales summary
+report with regional breakdown"
+
+git diff
+
+git checkout -b
+feature/new-report
+
+git revert HEAD
+
+git push origin main</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="insight-box success">
+                        <span class="insight-icon">✅</span>
+                        <div>
+                            <strong>Claude writes meaningful commit messages</strong>
+                            <p>It reads the actual changes you made and writes descriptive messages automatically. No more "fixed stuff" commits.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Basic Git Concepts -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">Git Concepts in 60 Seconds</h3>
+                    <p class="technique-tagline">Just enough to understand what Claude is doing</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="command-grid" style="grid-template-columns: repeat(3, 1fr);">
+                        <div class="command-card">
+                            <div class="command-name">Repository</div>
+                            <div class="command-desc">Your project folder</div>
+                            <p>A folder tracked by git. Created with <code>git init</code> or cloned from a remote (like GitHub/Azure DevOps).</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-name">Commit</div>
+                            <div class="command-desc">A save point</div>
+                            <p>A snapshot of your files at a specific moment. Like "Save As" but smarter — tracks what changed.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-name">Branch</div>
+                            <div class="command-desc">A parallel version</div>
+                            <p>Work on something new without affecting the main version. Merge it back when done.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-name">Push</div>
+                            <div class="command-desc">Upload changes</div>
+                            <p>Send your commits to the remote server (GitHub, Azure DevOps) so others can see them.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-name">Pull</div>
+                            <div class="command-desc">Download changes</div>
+                            <p>Get the latest commits from the remote that others have pushed.</p>
+                        </div>
+                        <div class="command-card">
+                            <div class="command-name">Diff</div>
+                            <div class="command-desc">See what changed</div>
+                            <p>Compare your current files to the last commit. Shows exactly what was added, removed, or modified.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommended Workflow -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">Recommended Workflow</h3>
+                    <p class="technique-tagline">A simple pattern for daily work</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="workflow-steps">
+                        <div class="workflow-step">
+                            <span class="step-num">1</span>
+                            <div class="step-content">
+                                <strong>Start your session</strong>
+                                <p>Open your project folder, run <code>claude</code></p>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <span class="step-num">2</span>
+                            <div class="step-content">
+                                <strong>Do your work</strong>
+                                <p>Ask Claude to build, fix, or modify your code</p>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <span class="step-num">3</span>
+                            <div class="step-content">
+                                <strong>Review what changed</strong>
+                                <p>Ask: <em>"Show me what changed"</em> — Claude runs <code>git diff</code> and explains it</p>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <span class="step-num">4</span>
+                            <div class="step-content">
+                                <strong>Commit when happy</strong>
+                                <p>Ask: <em>"Commit these changes"</em> — Claude stages, writes a message, and commits</p>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <span class="step-num">5</span>
+                            <div class="step-content">
+                                <strong>Push to remote</strong>
+                                <p>Ask: <em>"Push to remote"</em> — your work is now backed up and visible to the team</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="insight-box">
+                        <span class="insight-icon">💡</span>
+                        <div>
+                            <strong>Commit often</strong>
+                            <p>Small, frequent commits are better than one huge commit. Each commit is a restore point. If something goes wrong, you only lose a small amount of work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Getting Started with Git -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">Setting Up Git for a New Project</h3>
+                    <p class="technique-tagline">One-time setup — Claude can do this for you too</p>
+                </div>
+
+                <div class="technique-content">
+                    <p>Just ask Claude: <em>"Initialize a git repo for this project and create a .gitignore"</em></p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-file">What Claude will run</span>
+                        </div>
+                        <pre><code># Initialize a new git repository
+git init
+
+# Create .gitignore (Claude picks sensible defaults)
+# e.g., ignore .env, __pycache__, .DS_Store, etc.
+
+# First commit
+git add -A
+git commit -m "Initial project setup"</code></pre>
+                    </div>
+
+                    <div class="insight-box">
+                        <span class="insight-icon">🛡️</span>
+                        <div>
+                            <strong>.gitignore protects you</strong>
+                            <p>This file tells git which files to ignore — like <code>.env</code> (secrets), <code>__pycache__</code> (temp files), or large data files. Claude will create a sensible one for your project type.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Before Demo Tab -->
+        <section id="before-demo" class="tab-panel">
+            <h2 class="section-title">Before We Demo</h2>
+            <p class="section-subtitle">Tips for getting the most out of Claude Code</p>
+
+            <!-- Tips for Success -->
+            <div class="technique-card highlight">
+                <div class="technique-header">
+                    <h3 class="technique-title">Tips for Success</h3>
+                    <p class="technique-tagline">Work with Claude, not against it</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <span class="tip-icon">🎯</span>
+                            <h4>Be Specific About Intent</h4>
+                            <p>Tell Claude <em>what</em> you want to achieve, not <em>how</em> to code it. Your domain knowledge + Claude's coding = great results.</p>
+                            <div class="example-box good">
+                                <span class="example-label">✓ Good</span>
+                                <p>"Create a script that reads a CSV of sales data, flags rows with missing values, and outputs a summary with totals per region"</p>
+                            </div>
+                        </div>
+                        <div class="tip-card">
+                            <span class="tip-icon">🔄</span>
+                            <h4>Let It Fail & Recover</h4>
+                            <p>When Claude hits an error, don't interrupt. Watch it read the error, understand it, and fix it. This is the "agentic" part!</p>
+                            <div class="example-box warning">
+                                <span class="example-label">⚠️ Resist the urge</span>
+                                <p>Don't jump in to fix things yourself. Let Claude iterate.</p>
+                            </div>
+                        </div>
+                        <div class="tip-card">
+                            <span class="tip-icon">📈</span>
+                            <h4>Build Incrementally</h4>
+                            <p>Start with a simple working version, then add features. "Make it work, then make it better."</p>
+                            <div class="example-box good">
+                                <span class="example-label">✓ Pattern</span>
+                                <p>Prompt → Verify → "Now also add..." → Verify → "Now also add..."</p>
+                            </div>
+                        </div>
+                        <div class="tip-card">
+                            <span class="tip-icon">📝</span>
+                            <h4>Invest in CLAUDE.md</h4>
+                            <p>Every mistake becomes a note in your project memory. Over time, Claude gets smarter about <em>your</em> project.</p>
+                            <div class="example-box good">
+                                <span class="example-label">✓ Add rules like</span>
+                                <p>"Revenue figures are in thousands. Always multiply by 1000 before calculations."</p>
+                            </div>
+                        </div>
+                        <div class="tip-card">
+                            <span class="tip-icon">🧠</span>
+                            <h4>Pick the Right Model</h4>
+                            <p>Use <code>/model</code> to switch between models mid-session. Match the model to the task.</p>
+                            <div class="example-box good">
+                                <span class="example-label">✓ Rule of thumb</span>
+                                <p><strong>Sonnet</strong> for everyday tasks (fast, cheap). <strong>Opus</strong> for complex multi-step work (smarter, slower).</p>
+                            </div>
+                        </div>
+                        <div class="tip-card">
+                            <span class="tip-icon">📸</span>
+                            <h4>Reference Images with @</h4>
+                            <p>Claude can see images. Save a screenshot to your project folder and reference it with <code>@./screenshot.png</code>.</p>
+                            <div class="example-box good">
+                                <span class="example-label">✓ BI use case</span>
+                                <p>"Look at @./report_mockup.png — build me a Python script that produces this layout."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What to Expect -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">What to Expect in the Demo</h3>
+                    <p class="technique-tagline">Live agentic coding in action</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="demo-preview">
+                        <h4 class="content-heading">We'll Build: A Data Validation Tool</h4>
+                        <p>Watch Claude Code autonomously:</p>
+                        
+                        <div class="demo-steps">
+                            <div class="demo-step">
+                                <span class="demo-num">1</span>
+                                <div>
+                                    <strong>Read a CSV</strong>
+                                    <p>Understand the data structure</p>
+                                </div>
+                            </div>
+                            <div class="demo-step">
+                                <span class="demo-num">2</span>
+                                <div>
+                                    <strong>Write a Python script</strong>
+                                    <p>Create validation logic</p>
+                                </div>
+                            </div>
+                            <div class="demo-step">
+                                <span class="demo-num">3</span>
+                                <div>
+                                    <strong>Run it (and probably fail)</strong>
+                                    <p>See what happens</p>
+                                </div>
+                            </div>
+                            <div class="demo-step">
+                                <span class="demo-num">4</span>
+                                <div>
+                                    <strong>Fix the error automatically</strong>
+                                    <p>Without us copy-pasting anything</p>
+                                </div>
+                            </div>
+                            <div class="demo-step">
+                                <span class="demo-num">5</span>
+                                <div>
+                                    <strong>Add features incrementally</strong>
+                                    <p>Extend with natural language requests</p>
+                                </div>
+                            </div>
+                            <div class="demo-step">
+                                <span class="demo-num">6</span>
+                                <div>
+                                    <strong>Generate a report</strong>
+                                    <p>Output results to markdown</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="golden-rule">
+                        <span class="rule-icon">👀</span>
+                        <div>
+                            <span class="rule-label">WATCH FOR THIS</span>
+                            <span class="rule-text">The moment Claude reads an error, thinks, and fixes it without you doing anything. That's the magic.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Reference -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">Quick Reference Card</h3>
+                    <p class="technique-tagline">Keep this handy</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="reference-grid">
+                        <div class="reference-section">
+                            <h4>🚀 Getting Started</h4>
+                            <div class="reference-items">
+                                <code>claude</code> — Start session<br>
+                                <code>claude update</code> — Update CLI<br>
+                                <code>/init</code> — Create project memory<br>
+                                <code>/help</code> — List all commands
+                            </div>
+                        </div>
+                        <div class="reference-section">
+                            <h4>💾 Context & Safety</h4>
+                            <div class="reference-items">
+                                <code>/compact</code> — Summarize & continue<br>
+                                <code>/clear</code> — Fresh start<br>
+                                <code>/memory</code> — Edit CLAUDE.md<br>
+                                <code>/rewind</code> — Undo changes
+                            </div>
+                        </div>
+                        <div class="reference-section">
+                            <h4>📊 Monitoring</h4>
+                            <div class="reference-items">
+                                <code>/cost</code> — Token usage<br>
+                                <code>/model</code> — Switch model<br>
+                                <code>/doctor</code> — Health check
+                            </div>
+                        </div>
+                        <div class="reference-section">
+                            <h4>⌨️ Shortcuts</h4>
+                            <div class="reference-items">
+                                <kbd>Esc Esc</kbd> — Rewind menu<br>
+                                <kbd>@</kbd> — Reference files/images<br>
+                                <kbd>!</kbd> — Bash mode<br>
+                                <kbd>Shift+Enter</kbd> — New line
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Questions -->
+            <div class="questions-section">
+                <h3>❓ Questions before we dive in?</h3>
+                <p>Now's a good time to ask about anything before we see it live.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Claude Code Workshop | BI Team</p>
+        <p class="footer-links">
+            <a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank">Official Docs</a> |
+            <a href="https://github.com/anthropics/claude-code" target="_blank">GitHub</a> |
+            <a href="https://awesomeclaude.ai/code-cheatsheet" target="_blank">Cheat Sheet</a>
+        </p>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+Feedback:
+
+- Core differnece: Be more concise about what it means ‘You manage context’ vs ‘Remembers the session …’. Any more bullet points you could highlight on the core differences?
+- Dont include anything R or Shipping specific. Make it more general.
+- First Run & Authentication  - theres some styling issues. Points 1 and 2 code snippets are not in line with the headers.
+- The Permissions Model - please verify if this i scorrect. I havent seen anything like this when working with claude code.
+- Lets completely remove the data privacy section, thats another conversation.
+- Include the fact in plans & cost that we have the max model available and I have never run out of tokens
+- In checkpointing and rewind I would add a comment that its best to use git for version controlling. And then add a whole new tab which briefly explains how to use Git. Highlight the fact that claude is very good at managing and doing everything in git for you.
+- I think /login should be included in setup. Generally - does setup include everything to go from nothing to being able to run claude in terminal thorugh VSCode?
+- in [CLAUDE.md](http://CLAUDE.md) we should highlight the /init command
+- Give me a different example of a slash command. Idk, suggest some before writing it.
+- Remove headless mode, I ahve never used it.
+- Ctrl + R doesnt show full output. Ctrl + o seems to do that. R allows to search for a prompt you have given before.
+- \ + Enter is not what I use for multi-line. I use shift + enter
