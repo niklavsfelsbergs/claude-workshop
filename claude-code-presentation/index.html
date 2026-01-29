@@ -23,6 +23,7 @@
         <button class="tab-btn" data-tab="slash-commands">Slash Commands</button>
         <button class="tab-btn" data-tab="git">Git & Version Control</button>
         <button class="tab-btn" data-tab="before-demo">Before We Demo</button>
+        <button class="tab-btn" data-tab="live-demo">Live Demo</button>
     </nav>
 
     <!-- Main Content -->
@@ -1194,66 +1195,19 @@ git commit -m "Initial project setup"</code></pre>
             <!-- What to Expect -->
             <div class="technique-card">
                 <div class="technique-header">
-                    <h3 class="technique-title">What to Expect in the Demo</h3>
-                    <p class="technique-tagline">Live agentic coding in action</p>
+                    <h3 class="technique-title">What to Expect</h3>
+                    <p class="technique-tagline">We're about to see Claude Code in action</p>
                 </div>
 
                 <div class="technique-content">
-                    <div class="demo-preview">
-                        <h4 class="content-heading">We'll Build: A Data Validation Tool</h4>
-                        <p>Watch Claude Code autonomously:</p>
-                        
-                        <div class="demo-steps">
-                            <div class="demo-step">
-                                <span class="demo-num">1</span>
-                                <div>
-                                    <strong>Read a CSV</strong>
-                                    <p>Understand the data structure</p>
-                                </div>
-                            </div>
-                            <div class="demo-step">
-                                <span class="demo-num">2</span>
-                                <div>
-                                    <strong>Write a Python script</strong>
-                                    <p>Create validation logic</p>
-                                </div>
-                            </div>
-                            <div class="demo-step">
-                                <span class="demo-num">3</span>
-                                <div>
-                                    <strong>Run it (and probably fail)</strong>
-                                    <p>See what happens</p>
-                                </div>
-                            </div>
-                            <div class="demo-step">
-                                <span class="demo-num">4</span>
-                                <div>
-                                    <strong>Fix the error automatically</strong>
-                                    <p>Without us copy-pasting anything</p>
-                                </div>
-                            </div>
-                            <div class="demo-step">
-                                <span class="demo-num">5</span>
-                                <div>
-                                    <strong>Add features incrementally</strong>
-                                    <p>Extend with natural language requests</p>
-                                </div>
-                            </div>
-                            <div class="demo-step">
-                                <span class="demo-num">6</span>
-                                <div>
-                                    <strong>Generate a report</strong>
-                                    <p>Output results to markdown</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <p>In the next tab, we'll walk through a real task: <strong>reconciling surcharge claims against carrier refunds</strong>. Multiple Excel files, different formats, matching by tracking number — the kind of thing that normally takes manual effort.</p>
+                    <p style="margin-top: var(--space-md);">We'll do it step by step, talking to Claude in plain English. No Python knowledge needed.</p>
 
                     <div class="golden-rule">
                         <span class="rule-icon">👀</span>
                         <div>
-                            <span class="rule-label">WATCH FOR THIS</span>
-                            <span class="rule-text">The moment Claude reads an error, thinks, and fixes it without you doing anything. That's the magic.</span>
+                            <span class="rule-label">WATCH FOR THESE MOMENTS</span>
+                            <span class="rule-text">Claude reading an error and fixing it without help. Claude figuring out different file formats on its own. Claude generating a complete summary from messy data.</span>
                         </div>
                     </div>
                 </div>
@@ -1311,6 +1265,375 @@ git commit -m "Initial project setup"</code></pre>
             <div class="questions-section">
                 <h3>❓ Questions before we dive in?</h3>
                 <p>Now's a good time to ask about anything before we see it live.</p>
+            </div>
+        </section>
+
+        <!-- Live Demo Tab -->
+        <section id="live-demo" class="tab-panel">
+            <h2 class="section-title">Live Demo</h2>
+            <p class="section-subtitle">Claims Reconciliation — from messy Excel files to a clean report</p>
+
+            <!-- The Scenario -->
+            <div class="technique-card highlight">
+                <div class="technique-header">
+                    <h3 class="technique-title">The Scenario</h3>
+                    <p class="technique-tagline">A real BI task you'd normally do by hand</p>
+                </div>
+
+                <div class="technique-content">
+                    <p>We have a folder with surcharge dispute claims we submitted to a carrier, and credit notes we received back. We need to reconcile them: <strong>which claims were refunded, which were rejected, and which are still pending?</strong></p>
+
+                    <div class="grid-2">
+                        <div class="decision-box">
+                            <h4 class="content-heading">Input: What we have</h4>
+                            <ul class="decision-list">
+                                <li><strong>14 claim files</strong> (Excel) — surcharges we disputed</li>
+                                <li><strong>2 credit note files</strong> (Excel) — carrier's responses</li>
+                                <li>Different file formats and layouts across files</li>
+                                <li>Credit notes split across multiple sheets</li>
+                            </ul>
+                        </div>
+                        <div class="decision-box">
+                            <h4 class="content-heading">Output: What we want</h4>
+                            <ul class="decision-list">
+                                <li>One consolidated table: every claim with its status</li>
+                                <li><strong>Refunded</strong> — carrier approved and paid</li>
+                                <li><strong>Rejected</strong> — carrier denied the claim</li>
+                                <li><strong>Not in refunds</strong> — no response yet</li>
+                                <li>Summary statistics of the whole process</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">Step 1: Explore the Data</h3>
+                    <p class="technique-tagline">Let Claude understand what we're working with</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="demo-prompt-block">
+                        <h4 class="content-heading">What we'll say</h4>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-file">Prompt to Claude</span>
+                            </div>
+                            <pre><code>Look at the demo-ontrac-claims folder. There are two subfolders:
+all_claims_made and all_credit_notes. Explore the files and
+tell me what data we have — what columns, how many rows,
+what formats.</code></pre>
+                        </div>
+                    </div>
+
+                    <h4 class="content-heading">What Claude will do</h4>
+                    <div class="demo-steps">
+                        <div class="demo-step">
+                            <span class="demo-num">1</span>
+                            <div>
+                                <strong>List the folder contents</strong>
+                                <p>Runs a command to see all files</p>
+                            </div>
+                        </div>
+                        <div class="demo-step">
+                            <span class="demo-num">2</span>
+                            <div>
+                                <strong>Open sample files</strong>
+                                <p>Reads a few Excel files to understand the structure</p>
+                            </div>
+                        </div>
+                        <div class="demo-step">
+                            <span class="demo-num">3</span>
+                            <div>
+                                <strong>Report back</strong>
+                                <p>Summarizes what it found — columns, row counts, differences between files</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="insight-box">
+                        <span class="insight-icon">👀</span>
+                        <div>
+                            <strong>Watch for</strong>
+                            <p>Claude discovering on its own that the files have different formats — some have headers on row 4, some have different column layouts, credit notes have multiple sheets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">Step 2: Consolidate All Claims</h3>
+                    <p class="technique-tagline">Merge 14 files with different formats into one dataset</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="demo-prompt-block">
+                        <h4 class="content-heading">What we'll say</h4>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-file">Prompt to Claude</span>
+                            </div>
+                            <pre><code>Write a Python script that reads all 14 claims files from
+all_claims_made/ and combines them into a single dataset.
+Extract: tracking number, invoice number, surcharge type
+(dispute reason), and credit request amount.</code></pre>
+                        </div>
+                    </div>
+
+                    <h4 class="content-heading">What Claude will do</h4>
+                    <div class="demo-steps">
+                        <div class="demo-step">
+                            <span class="demo-num">1</span>
+                            <div>
+                                <strong>Write the script</strong>
+                                <p>Creates a Python file with logic to handle different formats</p>
+                            </div>
+                        </div>
+                        <div class="demo-step">
+                            <span class="demo-num">2</span>
+                            <div>
+                                <strong>Run it</strong>
+                                <p>Executes the script against the real files</p>
+                            </div>
+                        </div>
+                        <div class="demo-step">
+                            <span class="demo-num">3</span>
+                            <div>
+                                <strong>Handle errors</strong>
+                                <p>If a file has unexpected formatting, Claude reads the error and adapts</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="insight-box">
+                        <span class="insight-icon">👀</span>
+                        <div>
+                            <strong>Watch for</strong>
+                            <p>The agentic loop in action — Claude writes code, runs it, hits an error (likely a format mismatch), reads the traceback, and fixes it. This is the core demo moment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">Step 3: Read Credit Notes</h3>
+                    <p class="technique-tagline">Parse the carrier's refund responses</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="demo-prompt-block">
+                        <h4 class="content-heading">What we'll say</h4>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-file">Prompt to Claude</span>
+                            </div>
+                            <pre><code>Now read the credit notes from all_credit_notes/.
+These files have multiple sheets. Extract: tracking number,
+dispute status (Approved/Denied), and the paid amount.</code></pre>
+                        </div>
+                    </div>
+
+                    <h4 class="content-heading">What Claude will do</h4>
+                    <div class="demo-steps">
+                        <div class="demo-step">
+                            <span class="demo-num">1</span>
+                            <div>
+                                <strong>Update the script</strong>
+                                <p>Adds logic to read credit note files and all their sheets</p>
+                            </div>
+                        </div>
+                        <div class="demo-step">
+                            <span class="demo-num">2</span>
+                            <div>
+                                <strong>Handle multi-sheet files</strong>
+                                <p>One credit note has 2 sheets — Claude iterates over all of them</p>
+                            </div>
+                        </div>
+                        <div class="demo-step">
+                            <span class="demo-num">3</span>
+                            <div>
+                                <strong>Run and verify</strong>
+                                <p>Confirms it read the right number of rows from each sheet</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="insight-box">
+                        <span class="insight-icon">👀</span>
+                        <div>
+                            <strong>Watch for</strong>
+                            <p>Claude building on the existing script incrementally — not starting from scratch. It remembers what it already wrote.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">Step 4: Match & Reconcile</h3>
+                    <p class="technique-tagline">Join claims to refunds by tracking number</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="demo-prompt-block">
+                        <h4 class="content-heading">What we'll say</h4>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-file">Prompt to Claude</span>
+                            </div>
+                            <pre><code>Now match each claim to the credit notes using the tracking
+number. For each claim, determine the status:
+- "refunded" if the credit note shows Approved
+- "rejected" if the credit note shows Denied
+- "not_in_refunds" if the tracking number isn't in any
+  credit note
+
+Include the refunded amount (from the credit note) in the
+output.</code></pre>
+                        </div>
+                    </div>
+
+                    <h4 class="content-heading">What Claude will do</h4>
+                    <div class="demo-steps">
+                        <div class="demo-step">
+                            <span class="demo-num">1</span>
+                            <div>
+                                <strong>Add join logic</strong>
+                                <p>Matches claims to credit notes on tracking number</p>
+                            </div>
+                        </div>
+                        <div class="demo-step">
+                            <span class="demo-num">2</span>
+                            <div>
+                                <strong>Classify each claim</strong>
+                                <p>Assigns refunded / rejected / not_in_refunds status</p>
+                            </div>
+                        </div>
+                        <div class="demo-step">
+                            <span class="demo-num">3</span>
+                            <div>
+                                <strong>Output to Excel</strong>
+                                <p>Writes the reconciled data to a clean output file</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="insight-box">
+                        <span class="insight-icon">👀</span>
+                        <div>
+                            <strong>Watch for</strong>
+                            <p>We described the business logic in plain English. No Python, no SQL, no VLOOKUP — just the rules. Claude translates that into working code.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="technique-card">
+                <div class="technique-header">
+                    <h3 class="technique-title">Step 5: Summary Report</h3>
+                    <p class="technique-tagline">The big picture</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="demo-prompt-block">
+                        <h4 class="content-heading">What we'll say</h4>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-file">Prompt to Claude</span>
+                            </div>
+                            <pre><code>Give me a summary: how many total claims, how many refunded
+vs rejected vs still pending? What's the total amount
+claimed, total refunded, and total still outstanding?</code></pre>
+                        </div>
+                    </div>
+
+                    <h4 class="content-heading">What Claude will do</h4>
+                    <div class="demo-steps">
+                        <div class="demo-step">
+                            <span class="demo-num">1</span>
+                            <div>
+                                <strong>Aggregate the data</strong>
+                                <p>Groups by status, sums the amounts</p>
+                            </div>
+                        </div>
+                        <div class="demo-step">
+                            <span class="demo-num">2</span>
+                            <div>
+                                <strong>Print a clean summary</strong>
+                                <p>Shows counts and totals in a readable format</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="insight-box success">
+                        <span class="insight-icon">✅</span>
+                        <div>
+                            <strong>End result</strong>
+                            <p>From 16 messy Excel files with different formats, we got a clean reconciliation table and executive summary — by describing what we wanted in plain English.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What Just Happened -->
+            <div class="technique-card highlight">
+                <div class="technique-header">
+                    <h3 class="technique-title">What Just Happened</h3>
+                    <p class="technique-tagline">Let's recap what Claude did</p>
+                </div>
+
+                <div class="technique-content">
+                    <div class="grid-2">
+                        <div>
+                            <h4 class="content-heading">Without Claude Code</h4>
+                            <div class="mental-model old">
+                                <div class="model-step">Open each file manually</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step">Figure out which columns match</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step">Copy-paste into one spreadsheet</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step">Write VLOOKUP formulas</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step">Debug formula errors</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step">Manually build summary</div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="content-heading">With Claude Code</h4>
+                            <div class="mental-model new">
+                                <div class="model-step">Describe the data</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step highlight">Claude reads all files</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step highlight">Claude handles format differences</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step">Describe the matching logic</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step highlight">Claude joins, classifies, outputs</div>
+                                <div class="model-arrow">↓</div>
+                                <div class="model-step success">Clean report + summary</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="golden-rule">
+                        <span class="rule-icon">💡</span>
+                        <div>
+                            <span class="rule-label">THE TAKEAWAY</span>
+                            <span class="rule-text">You provided the domain knowledge — what to match, what the statuses mean, what output you need. Claude handled the Python, the file parsing, the edge cases, and the formatting.</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 

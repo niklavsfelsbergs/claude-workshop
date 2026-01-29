@@ -933,6 +933,26 @@ body {
     font-size: 0.8rem;
 }
 
+/* Demo Prompt Block */
+.demo-prompt-block {
+    background: rgba(139, 92, 246, 0.08);
+    border-left: 4px solid var(--tcg-purple);
+    border-radius: 0 12px 12px 0;
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.demo-prompt-block .content-heading {
+    margin-top: 0;
+    color: var(--tcg-purple);
+}
+
+.demo-prompt-block .code-block code {
+    color: var(--tcg-white);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* Questions Section */
 .questions-section {
     text-align: center;
